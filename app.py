@@ -6,7 +6,7 @@ import io
 app = Flask(__name__)
 
 # ==== 1. Load model đã train ====
-model = joblib.load("C:\\Python\\Cuong PYTHON\\Fouling predictors\\rf_fouling_E1112.joblib")
+model = joblib.load("rf_fouling_E1112.joblib")
 
 # ==== 2. Hàm tạo feature giống lúc train ====
 def make_features_from_df(df_raw: pd.DataFrame) -> pd.DataFrame:
@@ -141,3 +141,4 @@ last_file_result = None
 
 if __name__ == "__main__":
     app.run(debug=True)
+
