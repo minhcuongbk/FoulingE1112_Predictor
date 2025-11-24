@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: afc-fouling-detector
+    env: python
+    region: singapore       # hoặc oregon/eu-west tùy Render
+    plan: free              # free tier
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    autoDeploy: true
+    envVars:
+      PYTHON_VERSION: 3.10
